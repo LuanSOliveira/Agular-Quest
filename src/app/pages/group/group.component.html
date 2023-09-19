@@ -1,1 +1,11 @@
-<app-side-navbar></app-side-navbar>
+<div class="GroupContainer">
+    <app-side-navbar></app-side-navbar>
+    <div class="InforContainer">
+        <h1>Meu Grupo</h1>
+        <ul class="CardList">
+            <li class="CardHero" *ngFor="let member of myGroup.groupList">
+
+            </li>
+        </ul>
+    </div>
+</div>

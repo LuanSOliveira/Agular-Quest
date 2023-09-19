@@ -5,8 +5,16 @@
             <h3 class="Title">Angular Quest</h3>
         </div>
         <div class="ContainerButton">
-            <app-nav-button [navigation]="'/dashboard'" [label]="'Novo'"></app-nav-button>
-            <app-nav-button [navigation]="'/dashboard'" [label]="'Continuar'" [disabled]="true"></app-nav-button>
+            <app-nav-button 
+                [navigation]="'/dashboard'" 
+                [label]="'Novo'"
+                [isNewGame]="true"
+            ></app-nav-button>
+            <app-nav-button 
+                [navigation]="'/dashboard'" 
+                [label]="'Continuar'" 
+                [disabled]="true"
+            ></app-nav-button>
         </div>
     </div>
 </div>
