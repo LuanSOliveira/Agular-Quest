@@ -1,0 +1,28 @@
+@import '../../styles/variables.scss';
+
+.HomeContainer{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .ContainerLogo{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        .ImageLogo{
+            width: 200px;
+        }
+    
+        .Title{
+            color: $font-padrao;
+            font-size: 40px;
+        }
+    }
+    .ContainerButton{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 32px;
+    }
+}

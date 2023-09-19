@@ -1,0 +1,20 @@
+<div class="MenuSideBar">
+    <p-sidebar [style]="sidebarStyles" [(visible)]="sidebarVisible">
+        <div class="ContainerLogo">
+            <img class="ImageLogo" src="assets/logo.png" alt="Logo Angular Quest">
+            <h3 class="Title">Angular Quest</h3>
+        </div>
+        <div class="ContainerNavigation">
+            <app-nav-button [navigation]="'/grupo'" [label]="'Grupo'"></app-nav-button>
+            <app-nav-button [navigation]="'/masmorra'" [label]="'Masmorra'"></app-nav-button>
+            <p-divider></p-divider>
+            <app-nav-button [navigation]="'/home'" [label]="'Sair'"></app-nav-button>
+        </div>
+    </p-sidebar>
+    <img 
+        class="MenuIcon"
+        src="{{iconSidebar}}" 
+        alt="Ícone Menu Lateral"
+        (click)="sidebarVisible = true"
+    />
+</div>

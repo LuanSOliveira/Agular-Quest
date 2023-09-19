@@ -1,0 +1,27 @@
+.MenuSideBar{
+    padding: 5px;
+
+    .ContainerLogo{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        .ImageLogo{
+            width: 120px;
+        }
+
+        .Title{
+            font-size: 40px;
+        }
+    }
+
+    .ContainerNavigation{
+        margin-top: 15px;
+    }
+
+    .MenuIcon{
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+    }
+}
