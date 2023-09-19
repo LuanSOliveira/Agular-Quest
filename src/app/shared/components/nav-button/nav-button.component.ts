@@ -21,7 +21,7 @@ export class NavButtonComponent {
   }
 
   newGroup: IGroup = {
-    groupList: [null, null, null, null]
+    groupList: []
   }
 
   constructor(private router: Router){}

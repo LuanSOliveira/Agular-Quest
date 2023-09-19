@@ -1,5 +1,5 @@
 export interface IGroup {
-    groupList: IHero[] | null[]
+    groupList: IHero[] | []
 }
 
 export interface IHero {

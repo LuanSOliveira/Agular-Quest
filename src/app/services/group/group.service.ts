@@ -8,7 +8,7 @@ import { IGroup } from 'src/app/interfaces/interfaces';
 export class GroupService {
 
   group: BehaviorSubject<IGroup> = new BehaviorSubject<IGroup>({
-    groupList: [null, null, null, null]
+    groupList: []
   })
 
   constructor() { }
