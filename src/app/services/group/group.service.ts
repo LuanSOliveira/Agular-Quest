@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { IGroup } from 'src/app/interfaces/interfaces';
+import { voidHero } from 'src/app/mocks/heros';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ import { IGroup } from 'src/app/interfaces/interfaces';
 export class GroupService {
 
   group: BehaviorSubject<IGroup> = new BehaviorSubject<IGroup>({
-    groupList: []
+    groupList: [voidHero, voidHero, voidHero, voidHero]
   })
 
   constructor() { }

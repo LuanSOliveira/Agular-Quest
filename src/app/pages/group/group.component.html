@@ -2,9 +2,13 @@
     <app-side-navbar></app-side-navbar>
     <div class="InforContainer">
         <h1>Meu Grupo</h1>
-        <ul class="CardList" *ngIf="myGroup.groupList">
-            <li class="CardHero" *ngFor="let member of myGroup.groupList">
-
+        <ul class="CardList">
+            <li class="CardHero" *ngFor="let member of myGroup; let i = index">
+                <app-add-hero-button 
+                    *ngIf="member.name === ''"
+                    [id]="i"
+                ></app-add-hero-button>
+                <p *ngIf="member.name !== ''">Teste</p>
             </li>
         </ul>
     </div>

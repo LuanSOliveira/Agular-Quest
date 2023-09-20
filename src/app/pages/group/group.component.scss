@@ -5,4 +5,14 @@
         color: $font-padrao;
         padding: 5px 25px;
     }
+    .CardList{
+        height: 600px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .CardHero{
+            list-style-type: none;
+        }
+    }
 }

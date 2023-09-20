@@ -1,0 +1,11 @@
+<div class="TokenContainer">
+    <img 
+        class="HeroImage" 
+        src="{{hero.img}}" 
+        alt="Token Herói: {{hero.name}}"
+        (click)="showDialog()"
+    >
+    <p-dialog header="{{hero.name}}" [(visible)]="visible" [style]="{width: '50vw'}">
+        <p>Teste</p>
+    </p-dialog>
+</div>

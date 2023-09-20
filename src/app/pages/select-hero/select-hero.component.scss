@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.SelectHeroContainer{
+    .BackIconContainer{
+        padding: 5px;
+
+        .BackIcon{
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+        }
+    }
+
+    .ListHeroContainer{
+        color: $font-padrao;
+        padding: 5px 25px;
+
+        .TokenContainer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+        }
+    }
+}

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { IGroup } from 'src/app/interfaces/interfaces';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { IHero } from 'src/app/interfaces/interfaces';
+import { voidHero } from 'src/app/mocks/heros';
 import { GroupService } from 'src/app/services/group/group.service';
 
 @Component({
@@ -7,16 +9,22 @@ import { GroupService } from 'src/app/services/group/group.service';
   templateUrl: './group.component.html',
   styleUrls: ['./group.component.scss']
 })
-export class GroupComponent implements OnInit {
+export class GroupComponent implements OnInit, OnDestroy {
 
-  myGroup!: IGroup
+  subscription!: Subscription
+  myGroup: IHero[] = [voidHero, voidHero, voidHero, voidHero]
 
   constructor (private groupService: GroupService) {}
 
   ngOnInit(): void {
-    this.groupService.getGroup().subscribe({
-      next: (response) => {this.myGroup = response}
-    })      
+    this.subscription = this.groupService.getGroup().subscribe({
+      next: (response) => {
+        this.myGroup = response.groupList
+      }
+    })
   }
 
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe()
+  }
 }

@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { IGroup } from 'src/app/interfaces/interfaces';
+import { IGroup, IPlay } from 'src/app/interfaces/interfaces';
+import { voidHero } from 'src/app/mocks/heros';
 
 @Component({
   selector: 'app-nav-button',
@@ -14,21 +15,24 @@ export class NavButtonComponent {
   @Input() isNewGame?: boolean
 
   buttonStyles: {} = {
-    "width": "150px",
+    "width": "215px",
     "background-color": "#3e5244",
     "border": "none",
-    "margin": "12px 0"
+    "margin": "12px 0",
+    "font-size": "22px"
   }
 
+  newPlay: IPlay = {dungeon: 0}
   newGroup: IGroup = {
-    groupList: []
+    groupList: [voidHero, voidHero, voidHero, voidHero]
   }
 
   constructor(private router: Router){}
 
   Navigate(): void{
     if(this.isNewGame){
-      localStorage.setItem('Grupo', JSON.stringify(this.newGroup))
+      localStorage.setItem('Angular Quest - Play', JSON.stringify(this.newPlay))
+      localStorage.setItem('Angular Quest - Grupo', JSON.stringify(this.newGroup))
     }
     this.router.navigate([this.navigation])
   }

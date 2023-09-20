@@ -9,13 +9,15 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GroupComponent } from './group/group.component';
 import { DungeonComponent } from './dungeon/dungeon.component';
+import { SelectHeroComponent } from './select-hero/select-hero.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     DashboardComponent,
     GroupComponent,
-    DungeonComponent
+    DungeonComponent,
+    SelectHeroComponent
   ],
   imports: [
     CommonModule,
