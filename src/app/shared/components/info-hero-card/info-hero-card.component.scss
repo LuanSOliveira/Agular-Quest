@@ -1,0 +1,26 @@
+.InfoContainer{
+    .HeaderContainer{
+        padding: 15px 0;
+    }
+    .LifeEnergyContainer{
+        display: flex;
+        justify-content: center;
+        .LifeEnergyBox{
+            text-align: center;
+            margin: 0 25px;
+        }
+    }
+    .AttributesContainer{
+        margin-top: 15px;
+    }
+    .SkillContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .ButtonContainer{
+        display: flex;
+        justify-content: center;
+    }
+}

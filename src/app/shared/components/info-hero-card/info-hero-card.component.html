@@ -1,1 +1,48 @@
-<p>info-hero-card works!</p>
+<div class="InfoContainer">
+    <div class="HeaderContainer">
+        <h2>{{hero.name}}</h2>
+    </div>
+    <div class="LifeEnergyContainer">
+        <div class="LifeEnergyBox">
+            <h3>Vida</h3>
+            <p-knob 
+                [(ngModel)]="life" 
+                [readonly]="true" 
+                [max]="maxLife" 
+                valueColor="Red" 
+                [size]="90"
+                [textColor]="'#fff'"
+            ></p-knob>
+        </div>
+        <div class="LifeEnergyBox">
+            <h3>Energia</h3>
+            <p-knob 
+                [(ngModel)]="energy" 
+                [readonly]="true" 
+                [max]="maxEnergy" 
+                valueColor="Yellow" 
+                [size]="90"
+                [textColor]="'#fff'"
+            ></p-knob>
+        </div>
+    </div>
+    <div class="AttributesContainer">
+        <p-chart type="bar" [data]="data" [options]="options" [height]="'250px'"></p-chart>
+    </div>
+    <div class="SkillContainer">
+        <app-skill-token *ngFor="let skill of hero.skills" [skill]="skill"></app-skill-token>
+    </div>
+    <div class="ButtonContainer">
+        <p-button 
+            label="Confirmar" 
+            styleClass="p-button-raised p-button-success" 
+            [style]="{'margin': '20px 15px'}"
+        ></p-button>
+        <p-button 
+            label="Cancelar" 
+            styleClass="p-button-raised p-button-danger" 
+            [style]="{'margin': '20px 15px'}"
+            (click)="CloseDialog()"
+        ></p-button>
+    </div>
+</div>

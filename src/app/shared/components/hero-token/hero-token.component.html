@@ -5,7 +5,14 @@
         alt="Token Herói: {{hero.name}}"
         (click)="showDialog()"
     >
-    <p-dialog header="{{hero.name}}" [(visible)]="visible" [style]="{width: '50vw'}">
-        <p>Teste</p>
+    <p-dialog 
+        [(visible)]="visible" 
+        [style]="{'width': '90vw', 'height': '80vh'}"
+        [modal]="true"
+        [draggable]="false"
+        [contentStyle]="{'background-color': '#4d6253', 'color': '#fff'}"
+        [showHeader]="false"
+    >
+        <app-info-hero-card [hero]="hero" (sendCloseDialog)="closeDialog()"></app-info-hero-card>
     </p-dialog>
 </div>

@@ -15,4 +15,8 @@ export class HeroTokenComponent {
     this.visible = true;
   }
 
+  closeDialog() {
+    this.visible = false;
+  }
+
 }

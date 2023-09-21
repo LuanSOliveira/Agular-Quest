@@ -13,6 +13,7 @@ export class AddHeroButtonComponent {
 
   Hero: IHero = {
     id: 0,
+    status: 'ativo',
     name: 'Novo',
     img: '',
     life: 0,
@@ -23,6 +24,7 @@ export class AddHeroButtonComponent {
     def: 0,
     int: 0,
     spd: 0,
+    skills: []
   }
 
   constructor(private groupService: GroupService, private router: Router){}

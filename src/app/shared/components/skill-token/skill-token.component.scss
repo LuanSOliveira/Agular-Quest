@@ -1,0 +1,35 @@
+.SkillContainer{
+    background-color: #5c7262;
+    display: flex;
+    width: 270px;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    .ImageContainer{
+        margin-right: 15px;
+        img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50px;
+        }
+    }
+
+    .DescriptionContainer{
+        width: 100%;
+        .TitleBox{
+            display: flex;
+            justify-content: space-between;
+
+            .EnergyCost{
+                text-align: center;
+                border-radius: 25px;
+                font-weight: bold;
+                width: 25px;
+                height: 25px;
+                background-color: #4d6253;
+            }
+        }
+    }
+}

@@ -8,6 +8,7 @@ export interface IGroup {
 
 export interface IHero {
     id: number,
+    status: string
     name: string,
     img: string,
     life: number,
@@ -18,4 +19,15 @@ export interface IHero {
     def: number,
     int: number,
     spd: number,
+    skills: ISkill[]
+}
+
+export interface ISkill {
+    id: number,
+    name: string,
+    img: string,
+    description: string,
+    attribute: string,
+    bonus: number,
+    cost: number
 }
