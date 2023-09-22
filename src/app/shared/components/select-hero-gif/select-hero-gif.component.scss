@@ -1,0 +1,27 @@
+@import '../../../styles/variables.scss';
+
+.SelectGifContainer{
+    padding-top: 25px;
+    overflow-y: hidden;
+    .GifContainer{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .GifButton{
+            background-color: $bg-box4;
+            border: none;
+            border-radius: 25px;
+            margin: 15px;
+            border: 2px solid;
+            border-color: $bg-box2;
+            box-shadow: 0 0 0 3px $bg-box4;
+            cursor: pointer;
+
+            .GifImage{
+                width: 185px;
+                height: 160px;
+            }
+        }
+    }
+}

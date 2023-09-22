@@ -1,4 +1,4 @@
-import { IHero } from "../interfaces/interfaces";
+import { IHero } from "../shared/interfaces/interfaces";
 import { skillList } from "./skills";
 
 export const voidHero: IHero = {
@@ -6,6 +6,7 @@ export const voidHero: IHero = {
     status: 'ativo',
     name: '',
     img: '',
+    gif: '',
     life: 0,
     maxLife: 0,
     energy: 0,
@@ -17,11 +18,12 @@ export const voidHero: IHero = {
     skills: []
   }
 
-export const Aventureira: IHero ={
+export const Espadachim: IHero ={
     id: 0,
     status: 'ativo',
-    name: 'Aventureira',
+    name: 'Espadachim',
     img: 'assets/tokens/00.png',
+    gif: '',
     life: 10,
     maxLife: 10,
     energy: 5,
@@ -33,11 +35,12 @@ export const Aventureira: IHero ={
     skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
 }
 
-export const Alquimista: IHero ={
+export const Arqueiro: IHero ={
     id: 1,
     status: 'ativo',
-    name: 'Alquimista',
+    name: 'Arqueiro',
     img: 'assets/tokens/01.png',
+    gif: '',
     life: 8,
     maxLife: 8,
     energy: 8,
@@ -49,11 +52,12 @@ export const Alquimista: IHero ={
     skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
 }
 
-export const Animal: IHero ={
+export const Clerigo: IHero ={
     id: 2,
     status: 'ativo',
-    name: 'Animal',
+    name: 'Clérigo',
     img: 'assets/tokens/02.png',
+    gif: '',
     life: 13,
     maxLife: 13,
     energy: 5,
@@ -65,11 +69,12 @@ export const Animal: IHero ={
     skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
 }
 
-export const Arqueira: IHero ={
+export const Mago: IHero ={
     id: 3,
     status: 'ativo',
-    name: 'Arqueira',
+    name: 'Mago',
     img: 'assets/tokens/03.png',
+    gif: '',
     life: 8,
     maxLife: 8,
     energy: 8,
@@ -81,60 +86,12 @@ export const Arqueira: IHero ={
     skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
 }
 
-export const Caçador: IHero ={
+export const Soldado: IHero ={
     id: 4,
     status: 'ativo',
-    name: 'Caçador',
-    img: 'assets/tokens/04.png',
-    life: 8,
-    maxLife: 8,
-    energy: 8,
-    maxEnergy: 8,
-    atk: 3,
-    def: 2,
-    int: 3,
-    spd: 4,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
-}
-
-//------------------------------------------------------------------------------------
-export const Soldado: IHero ={
-    id: 5,
-    status: 'ativo',
     name: 'Soldado',
-    img: 'assets/tokens/05.png',
-    life: 12,
-    maxLife: 12,
-    energy: 5,
-    maxEnergy: 5,
-    atk: 4,
-    def: 5,
-    int: 2,
-    spd: 2,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
-}
-
-export const Assassina: IHero ={
-    id: 6,
-    status: 'ativo',
-    name: 'Assassina',
-    img: 'assets/tokens/06.png',
-    life: 8,
-    maxLife: 8,
-    energy: 5,
-    maxEnergy: 5,
-    atk: 3,
-    def: 1,
-    int: 3,
-    spd: 5,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
-}
-
-export const Ninja: IHero ={
-    id: 7,
-    status: 'ativo',
-    name: 'Ninja',
-    img: 'assets/tokens/07.png',
+    img: 'assets/tokens/04.png',
+    gif: '',
     life: 8,
     maxLife: 8,
     energy: 8,
@@ -147,148 +104,63 @@ export const Ninja: IHero ={
 }
 
 export const Barbaro: IHero ={
-    id: 8,
+    id: 5,
     status: 'ativo',
     name: 'Barbaro',
-    img: 'assets/tokens/08.png',
-    life: 10,
-    maxLife: 10,
-    energy: 5,
-    maxEnergy: 5,
-    atk: 6,
-    def: 2,
-    int: 1,
-    spd: 3,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
-}
-
-export const Ladrao: IHero ={
-    id: 9,
-    status: 'ativo',
-    name: 'Ladrão',
-    img: 'assets/tokens/09.png',
-    life: 6,
-    maxLife: 6,
+    img: 'assets/tokens/05.png',
+    gif: '',
+    life: 8,
+    maxLife: 8,
     energy: 8,
     maxEnergy: 8,
-    atk: 2,
+    atk: 3,
     def: 2,
-    int: 4,
+    int: 2,
     spd: 5,
     skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
 }
 
-export const Atirador: IHero ={
-    id: 10,
+export const Alquimista: IHero ={
+    id: 6,
     status: 'ativo',
-    name: 'Atirador',
-    img: 'assets/tokens/10.png',
-    life: 6,
-    maxLife: 6,
-    energy: 4,
-    maxEnergy: 4,
-    atk: 4,
-    def: 2,
-    int: 2,
-    spd: 3,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
-}
-
-export const Guerreira: IHero ={
-    id: 11,
-    status: 'ativo',
-    name: 'Guerreira',
-    img: 'assets/tokens/11.png',
-    life: 12,
-    maxLife: 12,
-    energy: 5,
-    maxEnergy: 5,
-    atk: 4,
-    def: 5,
-    int: 2,
-    spd: 2,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
-}
-
-export const Cleriga: IHero ={
-    id: 12,
-    status: 'ativo',
-    name: 'Clériga',
-    img: 'assets/tokens/12.png',
-    life: 6,
-    maxLife: 6,
-    energy: 10,
-    maxEnergy: 10,
-    atk: 1,
-    def: 2,
-    int: 4,
-    spd: 2,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
-}
-
-export const Mago: IHero ={
-    id: 13,
-    status: 'ativo',
-    name: 'Mago',
-    img: 'assets/tokens/13.png',
-    life: 5,
-    maxLife: 5,
-    energy: 14,
-    maxEnergy: 14,
-    atk: 1,
-    def: 1,
-    int: 6,
-    spd: 2,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
-}
-
-export const Samurai: IHero ={
-    id: 14,
-    status: 'ativo',
-    name: 'Samurai',
-    img: 'assets/tokens/14.png',
+    name: 'Alquimista',
+    img: 'assets/tokens/06.png',
+    gif: '',
     life: 8,
     maxLife: 8,
-    energy: 5,
-    maxEnergy: 5,
-    atk: 4,
-    def: 3,
+    energy: 8,
+    maxEnergy: 8,
+    atk: 3,
+    def: 2,
     int: 2,
-    spd: 4,
+    spd: 5,
     skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
 }
 
-export const Monge: IHero ={
-    id: 15,
+export const Necromante: IHero ={
+    id: 7,
     status: 'ativo',
-    name: 'Monge',
-    img: 'assets/tokens/15.png',
+    name: 'Necromante',
+    img: 'assets/tokens/07.png',
+    gif: '',
     life: 8,
     maxLife: 8,
-    energy: 5,
-    maxEnergy: 5,
-    atk: 4,
-    def: 3,
-    int: 3,
-    spd: 4,
+    energy: 8,
+    maxEnergy: 8,
+    atk: 3,
+    def: 2,
+    int: 2,
+    spd: 5,
     skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
 }
 
 export const HeroList: IHero[] = [
-  Aventureira,
-  Alquimista,
-  Animal,
-  Arqueira,
-  Caçador,
-  Soldado,
-  Assassina,
-  Ninja,
-  Barbaro,
-  Ladrao,
-  Atirador,
-  Guerreira,
-  Cleriga,
+  Espadachim,
+  Arqueiro,
+  Clerigo,
   Mago,
-  Samurai,
-  Monge
+  Soldado,
+  Barbaro,
+  Alquimista,
+  Necromante
 ]

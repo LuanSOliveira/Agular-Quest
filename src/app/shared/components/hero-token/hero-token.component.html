@@ -4,6 +4,7 @@
         src="{{hero.img}}" 
         alt="Token Herói: {{hero.name}}"
         (click)="showDialog()"
+        [ngClass]="inativeToke()"
     >
     <p-dialog 
         [(visible)]="visible" 

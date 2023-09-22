@@ -11,6 +11,7 @@ export interface IHero {
     status: string
     name: string,
     img: string,
+    gif: string,
     life: number,
     maxLife: number,
     energy: number,
@@ -29,5 +30,12 @@ export interface ISkill {
     description: string,
     attribute: string,
     bonus: number,
-    cost: number
+    cost: number,
+    target: string
+}
+
+export interface IGif {
+    id: number,
+    name: string[],
+    gif: string[]
 }

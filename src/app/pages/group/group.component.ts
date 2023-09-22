@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { IHero } from 'src/app/interfaces/interfaces';
+import { IHero } from 'src/app/shared/interfaces/interfaces';
 import { voidHero } from 'src/app/mocks/heros';
 import { GroupService } from 'src/app/services/group/group.service';
 
@@ -12,7 +12,7 @@ import { GroupService } from 'src/app/services/group/group.service';
 export class GroupComponent implements OnInit, OnDestroy {
 
   subscription!: Subscription
-  myGroup: IHero[] = [voidHero, voidHero, voidHero, voidHero]
+  myGroup!: IHero[]
 
   constructor (private groupService: GroupService) {}
 

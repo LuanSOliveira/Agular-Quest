@@ -4,5 +4,28 @@
     .InforContainer{
         color: $font-padrao;
         padding: 5px 25px;
+
+        .GroupContainer{
+            margin-top: 20px;
+            .GroupBox{
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 10px;
+                justify-content: center;
+                
+                .Hero{
+                    width: 100px;
+                    height: 100px;
+                    margin: 5px;
+                    background: $bg-box2;
+                    border-radius: 15px;
+                    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+
+        .DungeonContainer{
+            margin-top: 20px;
+        }
     }
 }

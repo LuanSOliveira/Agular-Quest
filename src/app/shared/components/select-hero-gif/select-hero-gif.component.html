@@ -1,0 +1,14 @@
+<div class="SelectGifContainer">
+    <h2 class="Title">Escolha um Herói</h2>
+    <div class="GifContainer">
+        <button class="GifButton" *ngFor="let gif of gifs.gif; let i=index" (click)="SelectHero(i)">
+            <img class="GifImage" src="{{gif}}" alt="Gif Animado">
+        </button>
+    </div>
+    <p-button 
+        label="Cancelar" 
+        styleClass="p-button-raised p-button-danger" 
+        [style]="{'margin': '20px 15px'}"
+        (click)="CloseDialog()"
+    ></p-button>
+</div>

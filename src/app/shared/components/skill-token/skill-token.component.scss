@@ -1,5 +1,7 @@
+@import '../../../styles/variables.scss';
+
 .SkillContainer{
-    background-color: #5c7262;
+    background-color: $bg-box4;
     display: flex;
     width: 270px;
     padding: 10px;
@@ -28,7 +30,7 @@
                 font-weight: bold;
                 width: 25px;
                 height: 25px;
-                background-color: #4d6253;
+                background-color: $bg-box3;
             }
         }
     }

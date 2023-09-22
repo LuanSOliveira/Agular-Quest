@@ -37,6 +37,7 @@
             label="Confirmar" 
             styleClass="p-button-raised p-button-success" 
             [style]="{'margin': '20px 15px'}"
+            (click)="SelectHero()"
         ></p-button>
         <p-button 
             label="Cancelar" 
@@ -45,4 +46,24 @@
             (click)="CloseDialog()"
         ></p-button>
     </div>
+    <p-dialog 
+        [(visible)]="visibleGif" 
+        [style]="{'width': '85vw', 'height': '80vh'}"
+        [modal]="true"
+        [draggable]="false"
+        [contentStyle]="{
+            'background-color': '#4d6253', 
+            'color': '#fff', 
+            'overflow-y': 'hidden',
+            'border-radius': '25px'
+        }"
+        [showHeader]="false"
+    >
+        <app-select-hero-gif 
+            *ngIf="visibleGif"
+            [hero]="hero" 
+            [routerId]="routeId"
+            (sendCloseGifDialog)="CloseGifDialog()"
+        ></app-select-hero-gif>
+    </p-dialog>
 </div>

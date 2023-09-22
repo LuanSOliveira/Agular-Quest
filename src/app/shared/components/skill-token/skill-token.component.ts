@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ISkill } from 'src/app/interfaces/interfaces';
+import { ISkill } from 'src/app/shared/interfaces/interfaces';
 
 @Component({
   selector: 'app-skill-token',

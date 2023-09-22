@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { IPlay } from 'src/app/interfaces/interfaces';
+import { IPlay } from 'src/app/shared/interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'

@@ -8,7 +8,10 @@
                     *ngIf="member.name === ''"
                     [id]="i"
                 ></app-add-hero-button>
-                <p *ngIf="member.name !== ''">Teste</p>
+                <app-hero-card 
+                    *ngIf="member.name !== ''"
+                    [hero]="member"
+                ></app-hero-card>
             </li>
         </ul>
     </div>

@@ -15,6 +15,8 @@ import { HeroTokenComponent } from './components/hero-token/hero-token.component
 import { InfoHeroCardComponent } from './components/info-hero-card/info-hero-card.component';
 import { FormsModule } from '@angular/forms';
 import { SkillTokenComponent } from './components/skill-token/skill-token.component';
+import { HeroCardComponent } from './components/hero-card/hero-card.component';
+import { SelectHeroGifComponent } from './components/select-hero-gif/select-hero-gif.component';
 
 
 
@@ -25,7 +27,9 @@ import { SkillTokenComponent } from './components/skill-token/skill-token.compon
     AddHeroButtonComponent,
     HeroTokenComponent,
     InfoHeroCardComponent,
-    SkillTokenComponent
+    SkillTokenComponent,
+    HeroCardComponent,
+    SelectHeroGifComponent
   ],
   imports: [
     FormsModule,
@@ -43,7 +47,9 @@ import { SkillTokenComponent } from './components/skill-token/skill-token.compon
     AddHeroButtonComponent,
     HeroTokenComponent,
     InfoHeroCardComponent,
-    SkillTokenComponent
+    SkillTokenComponent,
+    HeroCardComponent,
+    SelectHeroGifComponent
   ]
 })
 export class SharedModule { }

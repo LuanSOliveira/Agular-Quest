@@ -1,0 +1,24 @@
+@import '../../../styles/variables.scss';
+
+.HeroCard{
+    width: 230px;
+    height: 230px;
+    font-size: 35px;
+    text-shadow: #000 1px 1px;
+    border-radius: 15px;
+    border: none;
+    margin: 15px 0;
+    color: #fff;
+    background-color: $bg-box2;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+    .HeroImage{
+        background-color: $bg-box2;
+        border-radius: 50px;
+        margin-bottom: 10px;
+        padding: 5px;
+        border: 2px solid;
+        border-color: $bg-padrao;
+        box-shadow: 0 0 0 3px $bg-box4;
+    }
+}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IHero } from 'src/app/interfaces/interfaces';
+import { IHero } from 'src/app/shared/interfaces/interfaces';
 import { HeroList } from 'src/app/mocks/heros';
 
 @Component({
