@@ -7,6 +7,7 @@ import { DividerModule } from 'primeng/divider';
 import { DialogModule } from 'primeng/dialog';
 import { ChartModule } from 'primeng/chart';
 import { KnobModule } from 'primeng/knob';
+import { TooltipModule } from 'primeng/tooltip';
 
 import { NavButtonComponent } from './components/nav-button/nav-button.component';
 import { SideNavbarComponent } from './components/side-navbar/side-navbar.component';
@@ -39,7 +40,8 @@ import { SelectHeroGifComponent } from './components/select-hero-gif/select-hero
     DividerModule,
     DialogModule,
     ChartModule,
-    KnobModule
+    KnobModule,
+    TooltipModule
   ],
   exports: [
     SideNavbarComponent,

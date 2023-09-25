@@ -1,7 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { IHero } from 'src/app/shared/interfaces/interfaces';
-import { GroupService } from 'src/app/services/group/group.service';
 
 @Component({
   selector: 'app-info-hero-card',
@@ -10,6 +9,7 @@ import { GroupService } from 'src/app/services/group/group.service';
 })
 export class InfoHeroCardComponent implements OnInit {
   @Input() hero!: IHero
+  @Input() inGroup: boolean = false
   @Output() sendCloseDialog = new EventEmitter<string>()
 
   visibleGif: boolean = false
@@ -23,9 +23,7 @@ export class InfoHeroCardComponent implements OnInit {
   routeId!: number
 
   constructor(
-    private route: ActivatedRoute, 
-    private router: Router,
-    private groupService: GroupService
+    private route: ActivatedRoute,
   ){}
 
   ngOnInit() {
@@ -84,11 +82,4 @@ export class InfoHeroCardComponent implements OnInit {
   SelectHero(): void{
     this.visibleGif = true
   }
-  // SelectHero(): void{
-  //   const dataStore: any = localStorage.getItem('Angular Quest - Grupo')
-  //   const newGroup: any = JSON.parse(dataStore)
-  //   newGroup.groupList[this.routeId] = this.hero
-  //   this.groupService.setGroup(newGroup)
-  //   this.router.navigate(['/grupo'])
-  // }
 }

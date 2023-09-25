@@ -1,8 +1,8 @@
 import { IGif } from "../shared/interfaces/interfaces"
 
-const gifEspadachim: IGif = {
+const gifGuerreiro: IGif = {
     id: 0,
-    name: ['Espadachim', 'Espadachim'],
+    name: ['Guerreiro', 'Guerreiro'],
     gif: ['assets/tokens/00m.gif', 'assets/tokens/00f.gif']
 }
 
@@ -48,13 +48,97 @@ const gifNecromante: IGif = {
     gif: ['assets/tokens/07m.gif', 'assets/tokens/07f.gif']
 }
 
+const gifPaladino: IGif = {
+    id: 8,
+    name: ['Paladino', 'Paladina'],
+    gif: ['assets/tokens/08m.gif', 'assets/tokens/08f.gif']
+}
+
+const gifBruxo: IGif = {
+    id: 9,
+    name: ['Bruxo', 'Bruxa'],
+    gif: ['assets/tokens/09m.gif', 'assets/tokens/09f.gif']
+}
+
+const gifMonge: IGif = {
+    id: 10,
+    name: ['Monge', 'Monge'],
+    gif: ['assets/tokens/10m.gif', 'assets/tokens/10f.gif']
+}
+
+const gifMusico: IGif = {
+    id: 11,
+    name: ['Músico', 'Música'],
+    gif: ['assets/tokens/11m.gif', 'assets/tokens/11f.gif']
+}
+
+const gifCacador: IGif = {
+    id: 12,
+    name: ['Caçador', 'Caçadora'],
+    gif: ['assets/tokens/12m.gif', 'assets/tokens/12f.gif']
+}
+
+const gifAssassino: IGif = {
+    id: 13,
+    name: ['Assassino', 'Assassina'],
+    gif: ['assets/tokens/13m.gif', 'assets/tokens/13f.gif']
+}
+
+const gifPirata: IGif = {
+    id: 14,
+    name: ['Pirata', 'Pirata'],
+    gif: ['assets/tokens/14m.gif', 'assets/tokens/14f.gif']
+}
+
+const gifLadino: IGif = {
+    id: 15,
+    name: ['Ladino', 'Ladina'],
+    gif: ['assets/tokens/15m.gif', 'assets/tokens/15f.gif']
+}
+
+const gifAtirador: IGif = {
+    id: 16,
+    name: ['Atirador', 'Atiradora'],
+    gif: ['assets/tokens/16m.gif', 'assets/tokens/16f.gif']
+}
+
+const gifMedico: IGif = {
+    id: 17,
+    name: ['Médico', 'Médica'],
+    gif: ['assets/tokens/17m.gif', 'assets/tokens/17f.gif']
+}
+
+const gifDruida: IGif = {
+    id: 18,
+    name: ['Druida', 'Druida'],
+    gif: ['assets/tokens/18m.gif', 'assets/tokens/18f.gif']
+}
+
+const gifEspiritual: IGif = {
+    id: 19,
+    name: ['Espiritual', 'Espiritual'],
+    gif: ['assets/tokens/19m.gif', 'assets/tokens/19f.gif']
+}
+
 export const gifList: IGif[] = [
-    gifEspadachim,
+    gifGuerreiro,
     gifArqueiro,
     gifClerigo,
     gifMago,
     gifSoldado,
     gifBarbaro,
     gifAlquimista,
-    gifNecromante
+    gifNecromante,
+    gifPaladino,
+    gifBruxo,
+    gifMonge,
+    gifMusico,
+    gifCacador,
+    gifAssassino,
+    gifPirata,
+    gifLadino,
+    gifAtirador,
+    gifMedico,
+    gifDruida,
+    gifEspiritual
 ]

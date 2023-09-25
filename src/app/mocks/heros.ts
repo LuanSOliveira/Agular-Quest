@@ -18,10 +18,10 @@ export const voidHero: IHero = {
     skills: []
   }
 
-export const Espadachim: IHero ={
+export const Guerreiro: IHero ={
     id: 0,
     status: 'ativo',
-    name: 'Espadachim',
+    name: 'Guerreiro',
     img: 'assets/tokens/00.png',
     gif: '',
     life: 10,
@@ -154,13 +154,229 @@ export const Necromante: IHero ={
     skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
 }
 
+export const Paladino: IHero ={
+    id: 8,
+    status: 'ativo',
+    name: 'Paladino',
+    img: 'assets/tokens/08.png',
+    gif: '',
+    life: 8,
+    maxLife: 8,
+    energy: 8,
+    maxEnergy: 8,
+    atk: 3,
+    def: 2,
+    int: 2,
+    spd: 5,
+    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+}
+
+export const Bruxo: IHero ={
+    id: 9,
+    status: 'ativo',
+    name: 'Bruxo',
+    img: 'assets/tokens/09.png',
+    gif: '',
+    life: 8,
+    maxLife: 8,
+    energy: 8,
+    maxEnergy: 8,
+    atk: 3,
+    def: 2,
+    int: 2,
+    spd: 5,
+    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+}
+
+export const Monge: IHero ={
+    id: 10,
+    status: 'ativo',
+    name: 'Monge',
+    img: 'assets/tokens/10.png',
+    gif: '',
+    life: 8,
+    maxLife: 8,
+    energy: 8,
+    maxEnergy: 8,
+    atk: 3,
+    def: 2,
+    int: 2,
+    spd: 5,
+    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+}
+
+export const Musico: IHero ={
+    id: 11,
+    status: 'ativo',
+    name: 'Músico',
+    img: 'assets/tokens/11.png',
+    gif: '',
+    life: 8,
+    maxLife: 8,
+    energy: 8,
+    maxEnergy: 8,
+    atk: 3,
+    def: 2,
+    int: 2,
+    spd: 5,
+    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+}
+
+export const Cacador: IHero ={
+    id: 12,
+    status: 'ativo',
+    name: 'Caçador',
+    img: 'assets/tokens/12.png',
+    gif: '',
+    life: 8,
+    maxLife: 8,
+    energy: 8,
+    maxEnergy: 8,
+    atk: 3,
+    def: 2,
+    int: 2,
+    spd: 5,
+    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+}
+
+export const Assassino: IHero ={
+    id: 13,
+    status: 'ativo',
+    name: 'Assassino',
+    img: 'assets/tokens/13.png',
+    gif: '',
+    life: 8,
+    maxLife: 8,
+    energy: 8,
+    maxEnergy: 8,
+    atk: 3,
+    def: 2,
+    int: 2,
+    spd: 5,
+    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+}
+
+export const Pirata: IHero ={
+    id: 14,
+    status: 'ativo',
+    name: 'Pirata',
+    img: 'assets/tokens/14.png',
+    gif: '',
+    life: 8,
+    maxLife: 8,
+    energy: 8,
+    maxEnergy: 8,
+    atk: 3,
+    def: 2,
+    int: 2,
+    spd: 5,
+    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+}
+
+export const Ladino: IHero ={
+    id: 15,
+    status: 'ativo',
+    name: 'Ladino',
+    img: 'assets/tokens/15.png',
+    gif: '',
+    life: 8,
+    maxLife: 8,
+    energy: 8,
+    maxEnergy: 8,
+    atk: 3,
+    def: 2,
+    int: 2,
+    spd: 5,
+    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+}
+
+export const Atirador: IHero ={
+    id: 16,
+    status: 'ativo',
+    name: 'Atirador',
+    img: 'assets/tokens/16.png',
+    gif: '',
+    life: 8,
+    maxLife: 8,
+    energy: 8,
+    maxEnergy: 8,
+    atk: 3,
+    def: 2,
+    int: 2,
+    spd: 5,
+    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+}
+
+export const Medico: IHero ={
+    id: 17,
+    status: 'ativo',
+    name: 'Médico',
+    img: 'assets/tokens/17.png',
+    gif: '',
+    life: 8,
+    maxLife: 8,
+    energy: 8,
+    maxEnergy: 8,
+    atk: 3,
+    def: 2,
+    int: 2,
+    spd: 5,
+    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+}
+
+export const Druida: IHero ={
+    id: 18,
+    status: 'ativo',
+    name: 'Druida',
+    img: 'assets/tokens/18.png',
+    gif: '',
+    life: 8,
+    maxLife: 8,
+    energy: 8,
+    maxEnergy: 8,
+    atk: 3,
+    def: 2,
+    int: 2,
+    spd: 5,
+    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+}
+
+export const Espiritual: IHero ={
+    id: 19,
+    status: 'ativo',
+    name: 'Espiritual',
+    img: 'assets/tokens/19.png',
+    gif: '',
+    life: 8,
+    maxLife: 8,
+    energy: 8,
+    maxEnergy: 8,
+    atk: 3,
+    def: 2,
+    int: 2,
+    spd: 5,
+    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+}
+
 export const HeroList: IHero[] = [
-  Espadachim,
+  Guerreiro,
   Arqueiro,
   Clerigo,
   Mago,
   Soldado,
   Barbaro,
   Alquimista,
-  Necromante
+  Necromante,
+  Paladino,
+  Bruxo,
+  Monge,
+  Musico,
+  Cacador,
+  Assassino,
+  Pirata,
+  Ladino,
+  Atirador,
+  Medico,
+  Druida,
+  Espiritual
 ]

@@ -1,4 +1,14 @@
-<button class="HeroCard">
+<button class="HeroCard" (click)="showDialog()">
     <img class="HeroImage" src="{{hero.img}}" alt="Ícone do Herói: {{hero.name}}">
     <p>{{hero.name}}</p>
 </button>
+<p-dialog 
+    [(visible)]="visible" 
+    [style]="{'width': '90vw', 'height': '80vh'}"
+    [modal]="true"
+    [draggable]="false"
+    [contentStyle]="{'background-color': '#4d6253', 'color': '#fff'}"
+    [showHeader]="false"
+>
+    <app-info-hero-card [hero]="hero" (sendCloseDialog)="closeDialog()" [inGroup]="true"></app-info-hero-card>
+</p-dialog>

@@ -1,7 +1,10 @@
+@import '../../../styles/variables.scss';
+
 .InfoContainer{
     .HeaderContainer{
         padding: 15px 0;
     }
+
     .LifeEnergyContainer{
         display: flex;
         justify-content: center;
@@ -9,16 +12,39 @@
             text-align: center;
             margin: 0 25px;
         }
+        .LifeSmallBox{
+            position: absolute;
+            margin: 5px 0 0 5px;
+        }
+        .EnergySmallBox{
+            position: absolute;
+            right: 0;
+            margin: 5px 5px 0 0;
+        }
     }
+
+    .GifContainer{
+        display: flex;
+        position: relative;
+        background-color: $bg-box4;
+        border: none;
+        border-radius: 25px;
+        border: 2px solid;
+        border-color: $bg-box2;
+        box-shadow: 0 0 0 3px $bg-box4;
+    }
+
     .AttributesContainer{
         margin-top: 15px;
     }
+
     .SkillContainer{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin-top: 15px;
     }
+
     .ButtonContainer{
         display: flex;
         justify-content: center;

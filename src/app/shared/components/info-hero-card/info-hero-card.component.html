@@ -3,7 +3,7 @@
         <h2>{{hero.name}}</h2>
     </div>
     <div class="LifeEnergyContainer">
-        <div class="LifeEnergyBox">
+        <div class="LifeEnergyBox" *ngIf="!inGroup">
             <h3>Vida</h3>
             <p-knob 
                 [(ngModel)]="life" 
@@ -14,7 +14,34 @@
                 [textColor]="'#fff'"
             ></p-knob>
         </div>
-        <div class="LifeEnergyBox">
+        <div class="GifContainer" *ngIf="inGroup">
+            <div class="LifeSmallBox">
+                <p-knob 
+                    pTooltip="Vida" 
+                    tooltipPosition="top"
+                    [(ngModel)]="life" 
+                    [readonly]="true" 
+                    [max]="maxLife" 
+                    valueColor="Red" 
+                    [size]="55"
+                    [textColor]="'#fff'"
+                ></p-knob>
+            </div>
+            <img src="{{hero.gif}}" alt="Gif Animado">
+            <div class="EnergySmallBox">
+                <p-knob 
+                    pTooltip="Energia" 
+                    tooltipPosition="top"
+                    [(ngModel)]="energy" 
+                    [readonly]="true" 
+                    [max]="maxEnergy" 
+                    valueColor="Yellow" 
+                    [size]="55"
+                    [textColor]="'#fff'"
+                ></p-knob>
+            </div>
+        </div>
+        <div class="LifeEnergyBox" *ngIf="!inGroup">
             <h3>Energia</h3>
             <p-knob 
                 [(ngModel)]="energy" 
@@ -32,7 +59,7 @@
     <div class="SkillContainer">
         <app-skill-token *ngFor="let skill of hero.skills" [skill]="skill"></app-skill-token>
     </div>
-    <div class="ButtonContainer">
+    <div class="ButtonContainer" *ngIf="!inGroup">
         <p-button 
             label="Confirmar" 
             styleClass="p-button-raised p-button-success" 
@@ -46,16 +73,23 @@
             (click)="CloseDialog()"
         ></p-button>
     </div>
+    <div class="ButtonContainer" *ngIf="inGroup">
+        <p-button 
+            label="Voltar" 
+            styleClass="p-button-raised p-button-secondary" 
+            [style]="{'margin': '20px 15px'}"
+            (click)="CloseDialog()"
+        ></p-button>
+    </div>
     <p-dialog 
         [(visible)]="visibleGif" 
-        [style]="{'width': '85vw', 'height': '80vh'}"
+        [style]="{'width': '85vw', 'height': '85vh'}"
         [modal]="true"
         [draggable]="false"
         [contentStyle]="{
             'background-color': '#4d6253', 
-            'color': '#fff', 
-            'overflow-y': 'hidden',
-            'border-radius': '25px'
+            'color': '#fff',
+            'border-radius': '10px'
         }"
         [showHeader]="false"
     >

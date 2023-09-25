@@ -8,5 +8,15 @@ import { IHero } from '../../interfaces/interfaces';
 })
 export class HeroCardComponent {
   @Input() hero!: IHero
+
+  visible: boolean = false
+
+  showDialog() {
+    this.visible = true;
+  }
+
+  closeDialog() {
+    this.visible = false;
+  }
   
 }

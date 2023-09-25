@@ -13,6 +13,10 @@
         border: 2px solid;
         border-color: $bg-padrao;
         box-shadow: 0 0 0 3px $bg-box4;
+
+        &:hover{
+            background-color: $bg-box4;
+        }
     }
 
     .InativeToken{
