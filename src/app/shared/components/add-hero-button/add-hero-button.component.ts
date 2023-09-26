@@ -24,7 +24,8 @@ export class AddHeroButtonComponent {
     def: 0,
     int: 0,
     spd: 0,
-    skills: []
+    skills: [],
+    upgrade: []
   }
 
   constructor(private router: Router){}

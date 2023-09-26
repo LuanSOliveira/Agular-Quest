@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { IHero } from 'src/app/shared/interfaces/interfaces';
-import { voidHero } from 'src/app/mocks/heros';
 import { GroupService } from 'src/app/services/group/group.service';
 
 @Component({

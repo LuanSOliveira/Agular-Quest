@@ -1,5 +1,6 @@
 export interface IPlay {
-    dungeon: number
+    dungeon: number,
+    heros: number[]
 }
 
 export interface IGroup {
@@ -20,7 +21,8 @@ export interface IHero {
     def: number,
     int: number,
     spd: number,
-    skills: ISkill[]
+    skills: ISkill[],
+    upgrade: IUpgrade[]
 }
 
 export interface ISkill {
@@ -28,14 +30,27 @@ export interface ISkill {
     name: string,
     img: string,
     description: string,
-    attribute: string,
+    attribute: string[],
     bonus: number,
+    extraDamage: number,
+    cure: number,
     cost: number,
-    target: string
+    target: string,
+    effect: any
 }
 
 export interface IGif {
     id: number,
     name: string[],
     gif: string[]
+}
+
+export interface IUpgrade {
+    life: number,
+    energy: number,
+    atk: number,
+    def: number,
+    int: number,
+    spd: number,
+    skills: ISkill[]
 }

@@ -1,3 +1,4 @@
+import { CreateUpgrade } from "../shared/functions/common/generatingFunction";
 import { IHero } from "../shared/interfaces/interfaces";
 import { skillList } from "./skills";
 
@@ -15,7 +16,8 @@ export const voidHero: IHero = {
     def: 0,
     int: 0,
     spd: 0,
-    skills: []
+    skills: [],
+    upgrade: []
   }
 
 export const Guerreiro: IHero ={
@@ -29,10 +31,11 @@ export const Guerreiro: IHero ={
     energy: 5,
     maxEnergy: 5,
     atk: 3,
-    def: 2,
+    def: 3,
     int: 3,
     spd: 3,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    skills: [skillList[0]],
+    upgrade: [CreateUpgrade(2,0,1,1,0,1,[1, 2]), CreateUpgrade(2,1,1,1,1,0,[3]), CreateUpgrade(2,0,1,1,0,1,[4, 5]), CreateUpgrade(2,1,1,1,1,0,[6])]
 }
 
 export const Arqueiro: IHero ={
@@ -43,13 +46,14 @@ export const Arqueiro: IHero ={
     gif: '',
     life: 8,
     maxLife: 8,
-    energy: 8,
-    maxEnergy: 8,
-    atk: 1,
-    def: 1,
-    int: 5,
-    spd: 3,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    energy: 6,
+    maxEnergy: 6,
+    atk: 2,
+    def: 2,
+    int: 3,
+    spd: 4,
+    skills: [skillList[7]],
+    upgrade: [CreateUpgrade(1,1,1,1,0,1,[8, 9]), CreateUpgrade(1,1,1,1,1,1,[10]), CreateUpgrade(1,1,1,1,0,1,[11, 12]), CreateUpgrade(1,1,1,1,1,2,[13])]
 }
 
 export const Clerigo: IHero ={
@@ -58,15 +62,16 @@ export const Clerigo: IHero ={
     name: 'Clérigo',
     img: 'assets/tokens/02.png',
     gif: '',
-    life: 13,
-    maxLife: 13,
-    energy: 5,
-    maxEnergy: 5,
-    atk: 5,
+    life: 8,
+    maxLife: 8,
+    energy: 8,
+    maxEnergy: 8,
+    atk: 2,
     def: 3,
-    int: 1,
-    spd: 3,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    int: 3,
+    spd: 2,
+    skills: [skillList[14], skillList[15]],
+    upgrade: [CreateUpgrade(1,1,0,1,1,0,[16, 17]), CreateUpgrade(1,1,1,0,1,0,[18, 19]), CreateUpgrade(1,1,0,1,1,0,[20,21,22]), CreateUpgrade(1,1,2,1,1,1,[23,24])]
 }
 
 export const Mago: IHero ={
@@ -75,15 +80,16 @@ export const Mago: IHero ={
     name: 'Mago',
     img: 'assets/tokens/03.png',
     gif: '',
-    life: 8,
-    maxLife: 8,
-    energy: 8,
-    maxEnergy: 8,
-    atk: 3,
-    def: 2,
-    int: 2,
-    spd: 5,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    life: 6,
+    maxLife: 6,
+    energy: 14,
+    maxEnergy: 14,
+    atk: 1,
+    def: 1,
+    int: 5,
+    spd: 2,
+    skills: [skillList[25], skillList[26], skillList[27]],
+    upgrade: [CreateUpgrade(1,1,0,0,1,0,[28,29]), CreateUpgrade(1,1,0,0,1,0,[30,31]), CreateUpgrade(1,1,0,1,1,0,[32,33]), CreateUpgrade(1,1,2,1,2,1,[34,35])]
 }
 
 export const Soldado: IHero ={
@@ -92,15 +98,16 @@ export const Soldado: IHero ={
     name: 'Soldado',
     img: 'assets/tokens/04.png',
     gif: '',
-    life: 8,
-    maxLife: 8,
-    energy: 8,
-    maxEnergy: 8,
+    life: 10,
+    maxLife: 10,
+    energy: 5,
+    maxEnergy: 5,
     atk: 3,
-    def: 2,
+    def: 4,
     int: 2,
-    spd: 5,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    spd: 2,
+    skills: [skillList[36]],
+    upgrade: [CreateUpgrade(2,1,1,1,0,0,[37,38]), CreateUpgrade(2,1,1,1,0,0,[39]), CreateUpgrade(3,1,1,1,1,1,[40,41,42]), CreateUpgrade(3,1,1,1,1,1,[43])]
 }
 
 export const Barbaro: IHero ={
@@ -109,15 +116,16 @@ export const Barbaro: IHero ={
     name: 'Barbaro',
     img: 'assets/tokens/05.png',
     gif: '',
-    life: 8,
-    maxLife: 8,
-    energy: 8,
-    maxEnergy: 8,
-    atk: 3,
-    def: 2,
-    int: 2,
-    spd: 5,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    life: 12,
+    maxLife: 12,
+    energy: 4,
+    maxEnergy: 4,
+    atk: 5,
+    def: 3,
+    int: 1,
+    spd: 3,
+    skills: [skillList[44], skillList[45]],
+    upgrade: [CreateUpgrade(2,1,1,1,0,0,[46]), CreateUpgrade(2,1,1,1,0,1,[47,48]), CreateUpgrade(2,1,1,1,0,0,[49]), CreateUpgrade(2,1,2,1,0,1,[50])]
 }
 
 export const Alquimista: IHero ={
@@ -130,11 +138,12 @@ export const Alquimista: IHero ={
     maxLife: 8,
     energy: 8,
     maxEnergy: 8,
-    atk: 3,
+    atk: 1,
     def: 2,
-    int: 2,
-    spd: 5,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    int: 4,
+    spd: 3,
+    skills: [skillList[51], skillList[52]],
+    upgrade: [CreateUpgrade(1,1,0,1,1,0,[53]), CreateUpgrade(1,1,1,0,1,0,[54]), CreateUpgrade(1,2,0,1,1,0,[55]), CreateUpgrade(1,2,1,0,1,2,[56])]
 }
 
 export const Necromante: IHero ={
@@ -145,13 +154,14 @@ export const Necromante: IHero ={
     gif: '',
     life: 8,
     maxLife: 8,
-    energy: 8,
-    maxEnergy: 8,
-    atk: 3,
-    def: 2,
-    int: 2,
-    spd: 5,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    energy: 10,
+    maxEnergy: 10,
+    atk: 1,
+    def: 1,
+    int: 5,
+    spd: 2,
+    skills: [skillList[57], skillList[58]],
+    upgrade: [CreateUpgrade(0,2,0,0,1,0,[59,60]), CreateUpgrade(2,2,0,1,1,1,[61,62]), CreateUpgrade(0,2,0,0,1,0,[63]), CreateUpgrade(2,2,2,1,1,1,[64])]
 }
 
 export const Paladino: IHero ={
@@ -160,15 +170,16 @@ export const Paladino: IHero ={
     name: 'Paladino',
     img: 'assets/tokens/08.png',
     gif: '',
-    life: 8,
-    maxLife: 8,
-    energy: 8,
-    maxEnergy: 8,
+    life: 14,
+    maxLife: 14,
+    energy: 6,
+    maxEnergy: 6,
     atk: 3,
-    def: 2,
-    int: 2,
-    spd: 5,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    def: 5,
+    int: 3,
+    spd: 1,
+    skills: [skillList[0]],
+    upgrade: [CreateUpgrade(2,1,1,1,0,0,[0]), CreateUpgrade(2,1,1,1,1,1,[0]), CreateUpgrade(2,1,1,1,1,0,[0]), CreateUpgrade(2,1,1,2,1,1,[0])]
 }
 
 export const Bruxo: IHero ={
@@ -181,11 +192,12 @@ export const Bruxo: IHero ={
     maxLife: 8,
     energy: 8,
     maxEnergy: 8,
-    atk: 3,
+    atk: 1,
     def: 2,
-    int: 2,
-    spd: 5,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    int: 4,
+    spd: 2,
+    skills: [skillList[0]],
+    upgrade: [CreateUpgrade(1,1,0,0,1,0,[0]), CreateUpgrade(1,1,1,1,1,1,[0]), CreateUpgrade(1,1,0,0,1,1,[0]), CreateUpgrade(1,1,2,0,1,0,[0])]
 }
 
 export const Monge: IHero ={
@@ -194,15 +206,16 @@ export const Monge: IHero ={
     name: 'Monge',
     img: 'assets/tokens/10.png',
     gif: '',
-    life: 8,
-    maxLife: 8,
+    life: 10,
+    maxLife: 10,
     energy: 8,
     maxEnergy: 8,
     atk: 3,
-    def: 2,
-    int: 2,
-    spd: 5,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    def: 3,
+    int: 3,
+    spd: 4,
+    skills: [skillList[0]],
+    upgrade: [CreateUpgrade(1,1,1,2,0,0,[0]), CreateUpgrade(1,1,1,0,1,2,[0]), CreateUpgrade(1,1,1,2,0,0,[0]), CreateUpgrade(1,1,1,0,1,2,[0])]
 }
 
 export const Musico: IHero ={
@@ -213,13 +226,14 @@ export const Musico: IHero ={
     gif: '',
     life: 8,
     maxLife: 8,
-    energy: 8,
-    maxEnergy: 8,
-    atk: 3,
+    energy: 10,
+    maxEnergy: 10,
+    atk: 1,
     def: 2,
-    int: 2,
-    spd: 5,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    int: 3,
+    spd: 3,
+    skills: [skillList[0]],
+    upgrade: [CreateUpgrade(1,1,0,0,1,0,[0]), CreateUpgrade(1,1,0,1,1,2,[0]), CreateUpgrade(1,1,0,0,1,0,[0]), CreateUpgrade(1,1,0,1,1,2,[0])]
 }
 
 export const Cacador: IHero ={
@@ -234,9 +248,10 @@ export const Cacador: IHero ={
     maxEnergy: 8,
     atk: 3,
     def: 2,
-    int: 2,
-    spd: 5,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    int: 3,
+    spd: 4,
+    skills: [skillList[0]],
+    upgrade: [CreateUpgrade(1,1,1,0,0,2,[0]), CreateUpgrade(1,1,1,1,1,0,[0]), CreateUpgrade(1,1,1,1,0,2,[0]), CreateUpgrade(1,1,1,0,1,0,[0])]
 }
 
 export const Assassino: IHero ={
@@ -249,11 +264,12 @@ export const Assassino: IHero ={
     maxLife: 8,
     energy: 8,
     maxEnergy: 8,
-    atk: 3,
+    atk: 4,
     def: 2,
     int: 2,
     spd: 5,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    skills: [skillList[0]],
+    upgrade: [CreateUpgrade(1,1,1,0,0,1,[0]), CreateUpgrade(1,1,1,1,1,1,[0]), CreateUpgrade(1,1,1,1,1,1,[0]), CreateUpgrade(1,1,1,1,1,2,[0])]
 }
 
 export const Pirata: IHero ={
@@ -264,13 +280,14 @@ export const Pirata: IHero ={
     gif: '',
     life: 8,
     maxLife: 8,
-    energy: 8,
-    maxEnergy: 8,
+    energy: 6,
+    maxEnergy: 6,
     atk: 3,
     def: 2,
     int: 2,
-    spd: 5,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    spd: 3,
+    skills: [skillList[0]],
+    upgrade: [CreateUpgrade(1,0,1,0,1,1,[0]), CreateUpgrade(1,0,1,0,0,1,[0]), CreateUpgrade(1,2,1,1,1,1,[0]), CreateUpgrade(1,2,1,1,1,1,[0])]
 }
 
 export const Ladino: IHero ={
@@ -281,13 +298,14 @@ export const Ladino: IHero ={
     gif: '',
     life: 8,
     maxLife: 8,
-    energy: 8,
-    maxEnergy: 8,
+    energy: 10,
+    maxEnergy: 10,
     atk: 3,
     def: 2,
     int: 2,
     spd: 5,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    skills: [skillList[0]],
+    upgrade: [CreateUpgrade(1,1,1,1,1,1,[0]), CreateUpgrade(1,1,1,1,1,1,[0]), CreateUpgrade(1,1,1,1,1,1,[0]), CreateUpgrade(1,1,1,1,1,1,[0])]
 }
 
 export const Atirador: IHero ={
@@ -298,13 +316,14 @@ export const Atirador: IHero ={
     gif: '',
     life: 8,
     maxLife: 8,
-    energy: 8,
-    maxEnergy: 8,
-    atk: 3,
-    def: 2,
+    energy: 5,
+    maxEnergy: 5,
+    atk: 4,
+    def: 1,
     int: 2,
-    spd: 5,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    spd: 4,
+    skills: [skillList[0]],
+    upgrade: [CreateUpgrade(1,1,1,0,0,1,[0]), CreateUpgrade(1,1,1,1,0,1,[0]), CreateUpgrade(1,1,1,0,1,1,[0]), CreateUpgrade(1,1,1,1,0,1,[0])]
 }
 
 export const Medico: IHero ={
@@ -315,13 +334,14 @@ export const Medico: IHero ={
     gif: '',
     life: 8,
     maxLife: 8,
-    energy: 8,
-    maxEnergy: 8,
-    atk: 3,
+    energy: 10,
+    maxEnergy: 10,
+    atk: 1,
     def: 2,
-    int: 2,
-    spd: 5,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    int: 4,
+    spd: 2,
+    skills: [skillList[0]],
+    upgrade: [CreateUpgrade(1,1,0,0,1,0,[0]), CreateUpgrade(1,1,0,1,1,0,[0]), CreateUpgrade(1,1,0,0,1,0,[0]), CreateUpgrade(1,1,1,1,1,0,[0])]
 }
 
 export const Druida: IHero ={
@@ -332,13 +352,14 @@ export const Druida: IHero ={
     gif: '',
     life: 8,
     maxLife: 8,
-    energy: 8,
-    maxEnergy: 8,
-    atk: 3,
+    energy: 10,
+    maxEnergy: 10,
+    atk: 2,
     def: 2,
-    int: 2,
-    spd: 5,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    int: 4,
+    spd: 3,
+    skills: [skillList[0]],
+    upgrade: [CreateUpgrade(1,1,0,0,1,1,[0]), CreateUpgrade(1,1,1,1,1,0,[0]), CreateUpgrade(1,1,1,1,1,1,[0]), CreateUpgrade(3,3,0,0,1,0,[0])]
 }
 
 export const Espiritual: IHero ={
@@ -349,13 +370,14 @@ export const Espiritual: IHero ={
     gif: '',
     life: 8,
     maxLife: 8,
-    energy: 8,
-    maxEnergy: 8,
-    atk: 3,
+    energy: 10,
+    maxEnergy: 10,
+    atk: 2,
     def: 2,
-    int: 2,
-    spd: 5,
-    skills: [skillList[0], skillList[1], skillList[2], skillList[3]]
+    int: 4,
+    spd: 3,
+    skills: [skillList[0]],
+    upgrade: [CreateUpgrade(1,1,0,0,1,0,[0]), CreateUpgrade(1,1,1,1,1,1,[0]), CreateUpgrade(1,1,0,0,1,0,[0]), CreateUpgrade(1,1,0,0,1,1,[0])]
 }
 
 export const HeroList: IHero[] = [

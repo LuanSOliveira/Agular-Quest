@@ -5,10 +5,9 @@
         <div class="GroupContainer">
             <h2>Meu Grupo</h2>
             <div class="GroupBox">
-                <div class="Hero"></div>
-                <div class="Hero"></div>
-                <div class="Hero"></div>
-                <div class="Hero"></div>
+                <div class="Hero" *ngFor="let hero of group; let i = index">
+                    <img [ngClass]="indexClass(i)" *ngIf="hero.name !== ''" src="{{hero.gif}}" alt="">
+                </div>
             </div>
         </div>
         <div class="DungeonContainer">

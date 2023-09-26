@@ -3,6 +3,9 @@ import { Router } from '@angular/router';
 import { IGroup, IPlay } from 'src/app/shared/interfaces/interfaces';
 import { voidHero } from 'src/app/mocks/heros';
 import { GroupService } from 'src/app/services/group/group.service';
+import { RandomHeros } from '../../functions/common/generatingFunction';
+import { PlayService } from 'src/app/services/play/play.service';
+import { UpdatePlay } from '../../functions/common/actionFunction';
 
 @Component({
   selector: 'app-nav-button',
@@ -14,6 +17,7 @@ export class NavButtonComponent {
   @Input() disabled: boolean = false
   @Input() navigation: string = ''
   @Input() isNewGame?: boolean
+  @Input() isContinue?: boolean
 
   buttonStyles: {} = {
     "width": "215px",
@@ -23,18 +27,24 @@ export class NavButtonComponent {
     "font-size": "22px"
   }
 
-  newPlay: IPlay = {dungeon: 0}
+  newPlay: IPlay = {
+    dungeon: 0,
+    heros: RandomHeros(10)
+  }
   newGroup: IGroup = {
     groupList: [voidHero, voidHero, voidHero, voidHero]
   }
 
-  constructor(private router: Router, private groupService: GroupService){}
+  constructor(private router: Router, private groupService: GroupService, private playService: PlayService){}
 
   Navigate(): void{
     if(this.isNewGame){
       localStorage.setItem('Angular Quest - Play', JSON.stringify(this.newPlay))
-      //localStorage.setItem('Angular Quest - Grupo', JSON.stringify(this.newGroup))
+      this.playService.setPlay(this.newPlay)
       this.groupService.setGroup(this.newGroup)
+    }
+    if(this.isContinue){
+      UpdatePlay(this.playService)
     }
     this.router.navigate([this.navigation])
   }

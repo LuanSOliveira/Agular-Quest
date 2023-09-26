@@ -7,11 +7,16 @@ import { IPlay } from 'src/app/shared/interfaces/interfaces';
 })
 export class PlayService {
 
-  play: BehaviorSubject<IPlay> = new BehaviorSubject({dungeon: 0})
+  voidPlay: IPlay = {
+    dungeon: 0,
+    heros: []
+  }
+
+  play: BehaviorSubject<IPlay> = new BehaviorSubject(this.voidPlay)
 
   constructor() { }
 
-  setPlay(newPlay: any): void {
+  setPlay(newPlay: IPlay): void {
     this.play.next(newPlay)
   }
 
